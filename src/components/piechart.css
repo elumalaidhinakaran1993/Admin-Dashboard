@@ -1,0 +1,8 @@
+
+.recharts-default-legend {
+    /* width: 33%; */
+    /* float: left; */
+    width: 70%;
+    padding: 2px;
+    margin-left: 2rem !important;
+  }
