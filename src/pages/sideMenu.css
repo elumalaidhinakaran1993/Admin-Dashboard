@@ -5,7 +5,6 @@
 
 .sideNavColor {
   background-color: #3c3b54 !important;
- 
 }
 
 .textColor {
@@ -22,22 +21,13 @@
 }
 
 .inverted-border-radius {
-  /* position: relative;
-height: 100px;
-width: 325px; */
-   /* background-color: #f66969!important;  */
+  background-color: #f66969;
   border-radius: 2rem 0 0 !important;
 }
 
-
 .inverted-border-radius::before {
   content: "";
-  /* position: absolute; */
-
   background-color: transparent;
-  /* bottom: -50px;
-height: 50px;
-width: 25px; */
   border-top-left-radius: 25px;
   box-shadow: 0 -25px 0 0 #f66969;
 }
@@ -54,13 +44,13 @@ width: 25px; */
   opacity: 1;
   color: #ffffff;
 }
-.addFundBtn:hover{
+.addFundBtn:hover {
   color: #ffffff;
 }
 
-.addFundIcon{
- /* color: #514DDC !important; */
- color: white;
+.addFundIcon {
+  /* color: #514DDC !important; */
+  color: white;
 }
 
 .userImgSize {
@@ -75,8 +65,9 @@ width: 25px; */
 }
 
 .userNameText {
-  color: #4d4f5c;
+  color: #4D4F5C;
   font-size: 18px;
+  font-family: sans-serif;
 }
 
 .userStateText {
@@ -121,8 +112,12 @@ width: 25px; */
 tbody > tr > td {
   font: normal normal normal 14px/20px Source Sans Pro;
   letter-spacing: 0px;
-  color: #4d4f5c;
+ 
   opacity: 1;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #6E6F7A;
 }
 
 .playBtn {
@@ -150,12 +145,6 @@ tbody > tr > td {
   height: 60px;
 }
 
-/* .playbtnOuterBackGround {
-  background: #ffffff 0% 0% no-repeat padding-box;
- 
-  border-radius: 60%;
-} */
-
 .dropDownMenu {
   text-decoration: none;
   font: normal normal normal 16px/20px Source Sans Pro;
@@ -175,84 +164,122 @@ tbody > tr > td {
   opacity: 1;
 }
 
-.notificationLogo{
+.notificationLogo {
   width: 46px;
   height: 46px;
 }
+
 .ant-menu-item-selected {
   background-color: #343349 !important;
-
-  border-left:  7px solid #A3A0FB;
-  border-radius: 0px 0px 0px 0px!important;
+  border-left: 3px solid #a3a0fb;
+  border-radius: 0px 0px 0px 0px !important;
   border-right: 0px;
- 
-  /* margin: 0px!important;
-  */
 }
 
-.ant-menu-item-selected .ant-menu-item-icon  {
-  color: #A3A0FB !important;
-  }
- /* .dropdown-toggle::after {
-  content: none;
-
-} */
-
 .dot {
-  height: 10px;
-  width: 10px;
+  height: 7px;
+  width: 7px;
   background-color: #18db32;
   border-radius: 50%;
   display: inline-block;
+  /* left: 57.1rem; */
 }
 
-.toggle-btn {
-  position: relative;
-  display: block;
-  background: #3890b3;
-  color: white;
-  width: 300px;
-  padding: 10px;
-  text-decoration: none;
-  margin-bottom: 5px;
+.notifyCard {
+  z-index: 1;
 }
 
-.arrow {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.notificationShowMore:hover {
+  text-decoration: underline !important;
+  text-decoration-color: #3b86ff !important;
 }
 
-.arrow::before,
-.arrow::after {
-  position: relative;
-  content: '';
-  display: block;
-  width: 10px;
-  height: 1px;
-  background: white;
-  transition: 0.3s ease-in-out;
+.ant-menu-item-selected .ant-menu-item-icon {
+  color: #a3a0fb !important;
 }
 
-.arrow::before {
-  transform: rotate(45deg);
+@media only screen and (max-width: 768px) {
+  .searchBar {
+    display: none;
+    width: 0 !important;
+  }
 }
 
-.arrow::after {
-  left: 6px;
-  top: -1px;
-  transform: rotate(-45deg);
+@media only screen and (max-width: 768px) {
+  .saerchIcon {
+    margin-left: 150px;
+  }
+  .notifyIconSapce {
+    position: absolute;
+    left: 35%;
+  }
+  .userNameFix {
+    position: absolute;
+    left: 63%;
+    bottom: 0px;
+  }
+  .navUserLogo{
+    position: absolute;
+    top: 33%;
+    left: 140%;
+  }
 }
 
 
-.toggle-btn {
-  background: #13749a;
+.ant-menu .ant-menu-root .ant-menu-inline .ant-menu{
+  position: absolute !important;
+  margin-left: 0 !important;
 }
 
-.toggle-btn.active .arrow::before {
-  transform: rotate(-45deg);
+.logo-font{
+  font-family: sans-serif;
+  font-weight: 600;
+
+  size: 16px;
+  color: #ffffff;
+  margin-top: 8px;
+}
+.searchBar{
+  font-family: sans-serif;
+  font-weight: 400;
+  size: 16px;
+  color: #7D7F88;
+}
+.heading{
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #43425D;
+}
+.statistic-font{
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #7D7F88;
+}
+.referrerFont{
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #7D7F88;
+}
+.userName{
+  font-family: sans-serif;
+  font-weight: 600;
+
+  color: #4D4F5C;
+}
+.userState{
+  font-family: sans-serif;
+
+
+  color: #A1A0AE;
+}
+.products{
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #7D7F88;
 }
 
-.toggle-btn.active .arrow::after {
-  transform: rotate(45deg);
-}
+
