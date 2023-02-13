@@ -3,13 +3,11 @@ import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   SearchOutlined,
- 
   UpOutlined,
-  UserOutlined,
-  
+  UserOutlined
 } from "@ant-design/icons";
 import { Icon } from "@iconify/react";
-import { Dropdown, Layout, Menu, Space, theme } from "antd";
+import { Dropdown, Layout, Space,Menu } from "antd";
 import React, { useState } from "react";
 import "../pages/sideMenu.css";
 
@@ -23,11 +21,13 @@ import videoThumbnail from "../assests/images/video thumbnail.png";
 import Linechart from "../components/Linechart";
 import PieChart from "../components/Pieshcart";
 import Link from "antd/es/typography/Link";
+import Menuitem from "./menuItem";
+
 
 const { Header, Sider, Content } = Layout;
 
 const headerStyle = {
-  backgroundColor: "#ffffff",
+  backgroundColor: "#ffffff"
 };
 
 const SideMenu = () => {
@@ -35,9 +35,11 @@ const SideMenu = () => {
   const [open, setopen] = useState(false);
   const [dotopen, setdot] = useState(true);
   const [arrowDir, setarrowDir] = useState(false);
+ 
 
+  
   const menuList = [
-    <div className="row text-center">   
+    <div className="row text-center">
       <div className="col-2 gx-0">
         <img
           src={ourUser_2}
@@ -58,9 +60,7 @@ const SideMenu = () => {
           height={40}
         />
       </div>
-      <div className="col-7 gx-0 userName">Alex Marry
-      
-       </div>
+      <div className="col-7 gx-0 userName">Alex Marry</div>
       <div className="col-3 gx-0">5 min ago</div>
       <div className="col-2 gx-0">
         <img
@@ -71,20 +71,14 @@ const SideMenu = () => {
           height={40}
         />
       </div>
-      <div className="col-7 gx-0 userName">Eva Maria  </div>
+      <div className="col-7 gx-0 userName">Eva Maria </div>
       <div className="col-3 gx-0">10 min ago</div>
       <hr />
       <Link className="notificationShowMore">Show More</Link>
-    </div>,
+    </div>
   ];
 
-
-
-  const iconIndication = () => {
-    setopen(!open);
-    setdot(!dotopen);
-  };
-
+ 
   const dropdownmenu = (e) => {
     e.preventDefault();
     setarrowDir(!arrowDir);
@@ -94,18 +88,18 @@ const SideMenu = () => {
     {
       key: "1",
       label: <span>My profile</span>,
-      icon: <UserOutlined />,
+      icon: <UserOutlined />
     },
     {
       key: "2",
       label: <span>Billing</span>,
-      icon: <Icon icon="icon-park-outline:bill" />,
+      icon: <Icon icon="icon-park-outline:bill" />
     },
     {
       key: "3",
       label: <span>Logout</span>,
-      icon: <Icon icon="ic:round-logout" />,
-    },
+      icon: <Icon icon="ic:round-logout" />
+    }
   ];
 
   return (
@@ -119,11 +113,7 @@ const SideMenu = () => {
       >
         <div className="logo" />
         <div className="p-3">
-          <h5
-          className="logo-font" 
-          >
-            ACME
-          </h5>
+          <h5 className="logo-font">ACME</h5>
         </div>
         <Menu
           theme="#3C3B54"
@@ -133,28 +123,28 @@ const SideMenu = () => {
             {
               key: "1",
               label: <p className="textColor">Home</p>,
-              icon: <Icon icon="ri:home-line" color="white" />,
+              icon: <Icon icon="ri:home-line" color="white" />
             },
             {
               key: "2",
               icon: <Icon icon="bi:file-bar-graph" color="white" />,
-              label: <p className="textColor">Dahboard</p>,
+              label: <p className="textColor">Dahboard</p>
             },
             {
               key: "3",
               icon: <Icon icon="ion:mail-outline" color="white" />,
-              label: <p className="textColor">Inbox</p>,
+              label: <p className="textColor">Inbox</p>
             },
             {
               key: "4",
               icon: <Icon icon="gg:notes" color="white" />,
-              label: <p className="textColor">Products</p>,
+              label: <p className="textColor">Products</p>
             },
             {
               key: "5",
               icon: <Icon icon="ion:settings-outline" color="white" />,
-              label: <p className="textColor">Admin</p>,
-            },
+              label: <p className="textColor">Admin</p>
+            }
           ]}
         />
       </Sider>
@@ -168,7 +158,7 @@ const SideMenu = () => {
             collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
             {
               className: "trigger position-absolute top-50 start-0 mx-2",
-              onClick: () => setCollapsed(!collapsed),
+              onClick: () => setCollapsed(!collapsed)
             }
           )}
           <div className="row">
@@ -181,36 +171,23 @@ const SideMenu = () => {
               </div>
             </div>
             <div className="col-4 text-end mt-1 gx-4 notifyIconSapce">
-              <Icon
-                icon="clarity:notification-line"
-                className="fs-6 "
-                onClick={iconIndication}
-              />
-              {dotopen && (
-                <span className="dot position-absolute mt-4 me-5 "></span>
-              )}
+             <Menuitem/>
+             
 
-              {open && (
-                <div className="card  notifyCard">
-                  <div className="card-body">
-                    {menuList.map((menu) => (
-                      <div>{menu}</div>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
+
+            
 
             <div className="col-2 mt-1 text-end gx-5 userNameFix">
               <span>
                 <Dropdown
                   menu={{
-                    items,
+                    items
                   }}
                   trigger={["click"]}
                 >
                   <a className="dropDownMenu" onClick={dropdownmenu}>
-                    <Space className="me-2 ">
+                    <Space className="me-3 ">
                       Jhon Doe
                       {arrowDir === true ? (
                         <>
@@ -263,7 +240,10 @@ const SideMenu = () => {
                             <p className="statistic-font">Statistics</p>
                           </div>
                           <div className="col-6 text-end">
-                            <p className="statistic-font">Last 6 months<DownOutlined className="cursor-pointer mx-1" /></p>
+                            <p className="statistic-font">
+                              Last 6 months
+                              <DownOutlined className="cursor-pointer mx-1" />
+                            </p>
                           </div>
                           <div className="col-12">
                             <Linechart />
@@ -309,15 +289,15 @@ const SideMenu = () => {
                           </thead>
                           <tbody className="">
                             <tr>
-                              <td >google.com</td>
-                              <td >3746</td>
-                              <td >752</td>
-                              <td >43%</td>
-                              <td >$19,291</td>
+                              <td>google.com</td>
+                              <td>3746</td>
+                              <td>752</td>
+                              <td>43%</td>
+                              <td>$19,291</td>
                             </tr>
-                            <tr >
-                              <td >facebook.com</td>
-                              <td >8126</td>
+                            <tr>
+                              <td>facebook.com</td>
+                              <td>8126</td>
                               <td>728</td>
                               <td>32%</td>
                               <td>$17,638</td>
