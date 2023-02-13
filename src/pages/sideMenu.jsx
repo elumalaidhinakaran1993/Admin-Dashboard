@@ -15,12 +15,11 @@ import UserIcon from "../assests/images/profile-pic-01.jpg";
 import ourUser_2 from "../assests/images/profile-pic-02.jpg";
 import ourUser_3 from "../assests/images/profile-pic-03.jpg";
 import ourUser_4 from "../assests/images/profile-pic-04.jpg";
-import ourUser_5 from "../assests/images/profile-pic-05.jpg";
-import ourUser_6 from "../assests/images/profile-pic-06.jpg";
+
 import videoThumbnail from "../assests/images/video thumbnail.png";
 import Linechart from "../components/Linechart";
 import PieChart from "../components/Pieshcart";
-import Link from "antd/es/typography/Link";
+
 import Menuitem from "./menuItem";
 
 
@@ -32,52 +31,12 @@ const headerStyle = {
 
 const SideMenu = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const [open, setopen] = useState(false);
-  const [dotopen, setdot] = useState(true);
+
   const [arrowDir, setarrowDir] = useState(false);
  
 
   
-  const menuList = [
-    <div className="row text-center">
-      <div className="col-2 gx-0">
-        <img
-          src={ourUser_2}
-          className="rounded-circle"
-          alt=""
-          width={40}
-          height={40}
-        />
-      </div>
-      <div className="col-7  gx-0 userName">Bavid Kames </div>
-      <div className="col-3 gx-0">2 min ago</div>
-      <div className="col-2 gx-0">
-        <img
-          src={ourUser_6}
-          className="rounded-circle"
-          alt=""
-          width={40}
-          height={40}
-        />
-      </div>
-      <div className="col-7 gx-0 userName">Alex Marry</div>
-      <div className="col-3 gx-0">5 min ago</div>
-      <div className="col-2 gx-0">
-        <img
-          src={ourUser_5}
-          className="rounded-circle"
-          alt=""
-          width={40}
-          height={40}
-        />
-      </div>
-      <div className="col-7 gx-0 userName">Eva Maria </div>
-      <div className="col-3 gx-0">10 min ago</div>
-      <hr />
-      <Link className="notificationShowMore">Show More</Link>
-    </div>
-  ];
-
+  
  
   const dropdownmenu = (e) => {
     e.preventDefault();
